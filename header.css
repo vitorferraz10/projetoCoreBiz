@@ -1,0 +1,11 @@
+header {
+    width: 1920px;
+    height: 80px;
+    background-color:black
+}
+
+header .logo-corebiz {
+    width: 120px;
+    height: 30px;
+    color: black
+}
