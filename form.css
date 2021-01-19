@@ -1,0 +1,55 @@
+.section {
+    width: 100vw;
+    height: 146px;
+    background-color:#f2f2f2;
+    bottom: 222px
+}
+
+.section {
+   
+    display: flex;
+    flex-direction:column;
+   justify-content: center;
+   align-items: center;
+    
+
+}
+
+
+.section h2 {
+    font-family: Lato;
+    font-size: 20px;
+    line-height: 22px;
+    font-style: normal;
+    font-weight: bold;   
+    justify-self: center;
+  
+}
+
+form {
+    display:flex;
+    justify-content: center;
+}
+
+form .col-auto {
+    margin-right: 8px;
+    margin-top: 10px;
+}
+form input {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #FFF;
+    line-height:14px;
+    font-size: 12px;
+    padding:15px;
+ 
+}
+
+.btn {
+    width: 140px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
