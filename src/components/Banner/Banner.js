@@ -10,13 +10,22 @@ const separator = (
   </svg>
 );
 
+const title = () => {
+  return (
+    <div className="title">
+    <p>Olá, o que você está buscando?</p>
+    <h3>Criar ou migrar seu e-commerce?</h3>
+    </div>
+  )
+}
+
 const renderItem = () => {
   return (
     <div className="bannerItem">
       
       <div className="bannerItemBg">
         {separator}
-        <h3>olá</h3>
+
         <img src={bannerImage1} alt="banner 1" />
       </div>
     </div>

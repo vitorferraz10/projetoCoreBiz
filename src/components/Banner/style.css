@@ -1,6 +1,7 @@
 #mainBanner {
   display: flex;
-  ;
+
+  
 }
 
 #mainBanner .bannerItem {
@@ -26,5 +27,4 @@
   font-size: 30px;
   line-height:45px;
 }
-
 
