@@ -7,6 +7,13 @@ import { getProducts } from '../../services/products';
 
 const parseMoney = (vl) => vl.toLocaleString('pt-br', {minimumFractionDigits: 2});
 
+function title (){
+  return (
+    <h3>Mais vendidos</h3>
+  );
+  
+}
+
 function Products() {
   const [products, setProducts] = useState(null);
   const [loadingProducts, setLoadingProducts] = useState(false);
@@ -65,7 +72,7 @@ function Products() {
         );
       }
       return (
-        <div className="productCard" productId={productId}>
+        <div className="productCard" productId={productId}>      
           <img src={imageUrl} alt={productName} />
           <p className="productName">{productName}</p>
           <div className="starsBlock">
@@ -99,3 +106,9 @@ function Products() {
 
 export default Products;
 
+
+
+
+//  <div className="btn-products>
+//<button type="submit" className="btn">Compra</button>
+//</div>

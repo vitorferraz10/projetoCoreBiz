@@ -13,8 +13,10 @@ const separator = (
 const renderItem = () => {
   return (
     <div className="bannerItem">
+      
       <div className="bannerItemBg">
         {separator}
+        <h3>olá</h3>
         <img src={bannerImage1} alt="banner 1" />
       </div>
     </div>
@@ -25,6 +27,8 @@ function Banner() {
   return (
     <div id="mainBanner">
       {renderItem()}
+
+     
     </div>
   );
 }

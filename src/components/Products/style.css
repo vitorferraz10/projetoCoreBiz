@@ -1,3 +1,22 @@
 #productsContainer .container {
   display: flex;
 }
+
+
+.btn-products {
+  display: none;
+  width: 125.28px;
+  height: 32.42px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn-products .products.btn:hover {
+  display: block;
+  opacity: 0.9;
+  width: 135px;
+  transition: 1s;
+  cursor: pointer;
+  align-items: center;
+}
