@@ -86,17 +86,10 @@
 @media (max-width: 767px) {
   #mainHeader {
     width: 100%;
-     min-width: 320px;
-     
-
-   
+    min-width: 320px;
+    
  }
- #mainHeader header {
-  
-  flex-direction:column;
-  width: 100%;
-  min-width: 320px;
-}
+
  .column .mainLogo {
    width: 22vw; 
    max-width: 200px;
@@ -104,7 +97,7 @@
 
  }
  .column .searchField{
-   width: 280px;
+   width: 200px;
    height: 22px;
  }
 
