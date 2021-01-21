@@ -1,13 +1,13 @@
 /* bg header */
 
 #mainHeader {
-  position: absolute;
-  width: 100%;
-  max-width: 100%;
+  position: fixed;
+  width: 100vw;
   height: 80px;
   left: 0px;
   top: 0px;
   background: #FFFFFF;
+  z-index: 999;
 }
 
 #mainHeader .container {

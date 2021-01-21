@@ -64,6 +64,15 @@
   cursor: pointer;
 }
 
+.success {
+  flex-direction: column;
+  text-align: center;
+}
+
+.success .btn {
+  margin: 12px auto;
+}
+
 @media (max-width:900px){
 
   .newsLetterComponent{
@@ -113,6 +122,6 @@
   .newsLetterComponent .btn {
     width: 288px;
     height: 48px;
-  }
+  }  
 }
 

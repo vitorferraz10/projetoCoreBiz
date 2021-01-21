@@ -7,21 +7,13 @@ import { getProducts } from '../../services/products';
 
 const parseMoney = (vl) => vl.toLocaleString('pt-br', {minimumFractionDigits: 2});
 
-function title (){
-  return (
-    <h3>Mais vendidos</h3>
-  );
-  
-}
-
 function Products() {
   const [products, setProducts] = useState(null);
   const [loadingProducts, setLoadingProducts] = useState(false);
 
   if (!loadingProducts) {
-    debugger;
+    setLoadingProducts(true);
     getProducts().then(p => {
-      setLoadingProducts(true);
       setProducts(p);
     });
   }
@@ -46,6 +38,10 @@ function Products() {
     //   ]
     // },
 
+    // const calcDiscountPercent = (listPrice, price) => {
+    //   return Math.floor((price * 100) / listPrice);
+    // };
+
     const renderCard = (product) => {
       const {
         productId,
@@ -54,12 +50,17 @@ function Products() {
         imageUrl,
         price,
         installments,
+        listPrice,
       } = product;
       const mainInstallments = installments[0] || null;
       
       const renderInstallments = () => {
         if (!mainInstallments) {
-          return null;
+          return (
+            <span className="installments hidden">
+              À vista
+            </span>
+          );
         }
         const {
           quantity: installmentsQuantity,
@@ -71,17 +72,38 @@ function Products() {
           </span>
         );
       }
+
+      const renderDiscount = () => {
+        if (!listPrice) {
+          return null;
+        }
+  
+        return (
+          <div className="discount">
+            <span>
+              OFF
+            </span>
+          </div>
+        )
+      };
+
       return (
-        <div className="productCard" productId={productId}>      
+        <div className="productCard" productId={productId}>
+          {renderDiscount()}    
           <img src={imageUrl} alt={productName} />
           <p className="productName">{productName}</p>
           <div className="starsBlock">
             {stars} estrelas
           </div>
           <div className="priceBlock">
-            <span className="fullPrice">por R$ {parseMoney(price)}</span>
+            <p className="fullPrice">
+              por <strong>R$ {parseMoney(price)}</strong>
+            </p>
             {renderInstallments()}
           </div>
+          <button className="btnProducts">
+            Compra
+          </button>
         </div>
       )
     };
@@ -98,7 +120,10 @@ function Products() {
   return (
     <div id="productsContainer">
       <div className="container">
-        {renderProducts()}
+        <h3>Mais vendidos</h3>
+        <div className="productsBlock">
+          {renderProducts()}
+        </div>
       </div>
     </div>
   );
@@ -109,6 +134,6 @@ export default Products;
 
 
 
-//  <div className="btn-products>
-//<button type="submit" className="btn">Compra</button>
-//</div>
+//
+//
+//
